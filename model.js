@@ -153,6 +153,10 @@ function startModel(modelId, slideshow){
 								startModel(modelId + 1, true);
 								clearInterval(nextSlide);
 							}
+							else{
+								startModel(1, true);
+								clearInterval(nextSlide);
+							}
 						}
 					}, 30);
 				}, 2000);
@@ -162,4 +166,5 @@ function startModel(modelId, slideshow){
 	}
 }
 
+document.getElementById('besback').style.height = (document.getElementById('bes').clientHeight) + 'px';
 startModel(1, true);
