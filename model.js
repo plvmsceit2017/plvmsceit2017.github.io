@@ -116,7 +116,7 @@ function startModel(modelId, slideshow){
 						document.getElementById('sc').style.visibility = visibility;
 					}
 					else if(part == 'portrait'){
-						document.getElementById('pt').style.visibility = visibility;
+						//document.getElementById('pt').style.visibility = visibility;
 					}
 					animate3rd();
 				}
@@ -129,17 +129,39 @@ function startModel(modelId, slideshow){
 				duration: 750,
 				easing: 'easeInCubic'
 			},
-			complete: function(anim){
+			update: function(anim){
 				if(Math.round(anim.currentTime) >= 375 && animin){
 					animate2nd();
 					animin = false;
 				}
 			}	
 		});
+		if(part == 'portrait'){
+			if(visibility == 'visible'){
+				anime({
+					targets: '#portrait',
+					opacity: {
+						value: '1',
+						duration: 1125,
+						easing: 'easeInCubic'
+					}
+				});
+			}
+			else if(visibility == 'hidden'){
+				anime({
+					targets: '#portrait',
+					opacity: {
+						value: '0',
+						duration: 1125,
+						easing: 'easeInCubic'
+					}
+				});
+			}
+		}
 	}
 	
 	
-	document.getElementById('pt').style.visibility = 'hidden';
+	//document.getElementById('pt').style.visibility = 'hidden';
 	document.getElementById('nm').style.visibility = 'hidden';
 	document.getElementById('sc').style.visibility = 'hidden';
 	if(slideshow && (modelId == 2) && !loaded){
@@ -175,6 +197,9 @@ function startModel(modelId, slideshow){
 		}, 30);
 	}
 }
+
+
+					
 document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById('besback').style.height = (document.getElementById('bes').clientHeight) + 'px';
 	startModel(2, true);
