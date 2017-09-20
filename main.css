@@ -1,0 +1,105 @@
+body{
+	font-family: 'Prata', serif;
+}
+#back{
+	background-color: #263238;
+	width: 30vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#backcover{
+	background-color: #b0bec5;
+	width: 0;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#backcover2{
+	background-color: #78909c;
+	width: 0;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#portrait img{
+	width: auto;
+	height: 90vh;
+	position: fixed;
+	top: 5vh;
+	left: 10vw;
+	filter: grayscale(100%);
+}
+#portraitcover{
+	background-color: #b0bec5;
+	width: 0;
+	height: 90vh;
+	position: fixed;
+	top: 5vh;
+	left: 10vw;
+}
+#portraitcover2{
+	background-color: #78909c;
+	width: 0;
+	height: 90vh;
+	position: fixed;
+	top: 5vh;
+	left: 10vw;
+}
+
+#name{
+	color: #263238;
+	position: fixed;
+	top: 50vh;
+	left: 15vw;
+}
+#name .nm{
+	padding: 0 0 0 0;
+	font-size: 7vw;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#sect{
+	color: #263238;
+	position: fixed;
+	top: 50vh;
+	left: 15vw;
+}
+#sect .sc{
+	position: fixed;
+	font-size: 4vw;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#namecover{
+	background-color: #b0bec5;
+	width: 0;
+	height: 0;
+	position: fixed;
+	top: 50vh;
+	left: 15vw;
+}
+#namecover2{
+	background-color: #78909c;
+	width: 0;
+	height: 0;
+	position: fixed;
+	top: 50vh;
+	left: 15vw;
+}
+#title{
+	color: #fff;
+	width: 100vh;
+	height: 0vw;
+	transform-origin: top left;
+    position: fixed;
+	text-align: center;
+	font-size: 5vw;
+    left: -2.5vw;
+    top: 100%;
+    transform: rotate(-90deg);
+}

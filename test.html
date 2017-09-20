@@ -1,0 +1,232 @@
+<!doctype HTML>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
+		<style>
+			body{
+				font-family: 'Prata', serif;
+			}
+			#back{
+				background-color: #263238;
+				width: 30vw;
+				height: 100vh;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			#backcover{
+				background-color: #b0bec5;
+				width: 0;
+				height: 100vh;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			#model img{
+				width: auto;
+				height: 90vh;
+				position: fixed;
+				top: 5vh;
+				left: 10vw;
+				filter: grayscale(100%);
+			}
+			#modelcover{
+				background-color: #b0bec5;
+				width: 0;
+				height: 90vh;
+				position: fixed;
+				top: 5vh;
+				left: 10vw;
+			}
+			
+			#fullname{
+				color: #263238;
+				position: fixed;
+				top: 40vh;
+				left: 35vw;
+			}
+			#fullname #namef{
+				font-size: 7vw;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			
+			#sect{
+				color: #263238;
+				position: fixed;
+				top: 40vh;
+				left: 35vw;
+				font-size: 4vw;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			
+			#namecover{
+				background-color: #b0bec5;
+				width: 0;
+				height: 0;
+				position: fixed;
+				top: 40vh;
+				left: 35vw;
+			}
+			
+			#title{
+				color: #263238;
+				font-size: 3vw;
+				white-space: nowrap;
+				overflow: hidden;
+				position: relative;
+				padding: 10px;
+				border-radius: 5px 5px 0 0;
+				float: right;
+				transform: rotate(-90deg);
+				transform-origin: 100% 100%;
+			}
+		</style>
+	</head>
+	<body onclick="tap();">
+		<div id="back">
+		</div>
+		<div id="backcover">
+		</div>
+		<div id="model">
+			<img src="mowdel.jpg" id="img">
+		</div>
+		<div id="modelcover">
+		</div>
+		<div id="nameback">
+		</div>
+		<div id="namebackcover">
+		</div>
+		<div id="fullname">
+			<p id="namef">Ken Bernardino</p>
+		</div>
+		<p id="sect">BSIT 4-1</p>
+		<div id="namecover">
+		</div>
+		
+		<div id="title">
+			<p>MISS CEIT 2017</p>
+		</div>
+		<script src="bower_components/animejs/anime.min.js"></script>
+		<script type="text/javascript">
+			var back =  document.getElementById('back');
+			var model =  document.getElementById('model');
+			var fullname =  document.getElementById('fullname');
+			var ncw, bcw, mcw;
+			function animateName2(){
+				fullname.style.visibility = "visible"; 
+				anime({
+					targets: '#namecover',
+					width: {
+						value: '-=' + ncw,
+						duration: 750,
+						easing: 'easeOutCubic'
+					},
+					translateX: {
+						value: '+=' + ncw,
+						duration: 750,
+						easing: 'easeOutCubic'
+					},
+					complete: function(anim){
+						anime({targets: '#namecover', translateX: { value: '-=' + ncw, duration: 0 }});
+					}
+				});
+			}
+			function animateName(){
+				ncw = document.getElementById('namef').clientWidth;
+				anime({
+					targets: '#namecover',
+					width: {
+						value: '+=' + ncw,
+						duration: 750,
+						easing: 'easeInCubic'
+					},
+					complete: function(anim){
+						animateName2();
+					}
+				});
+			}
+			
+			function animateModel2(){
+				model.style.visibility = "visible"; 
+				anime({
+					targets: '#modelcover',
+					width: {
+						value: '-=' + mcw,
+						duration: 750,
+						easing: 'easeOutCubic'
+					},
+					translateX: {
+						value: '+=' + mcw,
+						duration: 750,
+						easing: 'easeOutCubic'
+					},
+					complete: function(anim){
+						anime({targets: '#modelcover', translateX: { value: '-=' + mcw, duration: 0 }});
+					}
+				});
+				animateName();
+			}
+			
+			function animateModel(){
+				mcw = document.getElementById('img').clientWidth;
+				anime({
+					targets: '#modelcover',
+					width: {
+						value: '+=' + mcw,
+						duration: 750,
+						easing: 'easeInCubic'
+					},
+					complete: function(anim){
+						animateModel2();
+					}
+				});
+			}
+			
+			function animateBack2(){
+				back.style.visibility = "visible"; 
+				anime({
+					targets: '#backcover',
+					width: {
+						value: '-=' + bcw,
+						duration: 750,
+						easing: 'easeOutCubic'
+					},
+					translateX: {
+						value: '+=' + bcw,
+						duration: 750,
+						easing: 'easeOutCubic'
+					},
+					complete: function(anim){
+						anime({targets: '#backcover', translateX: { value: '-=' + bcw, duration: 0 }});
+					}
+				});
+				animateModel();
+			}
+			function animateBack(){
+				bcw = back.clientWidth;
+				anime({
+					targets: '#backcover',
+					width: {
+						value: '+=' + bcw,
+						duration: 750,
+						easing: 'easeInCubic'
+					},
+					complete: function(anim){
+						animateBack2();
+					}
+				});
+			}
+			
+			function tap(){
+				document.getElementById('namecover').style.height = (document.getElementById('namef').clientHeight*2) + 'px';
+				model.style.visibility = "hidden";
+				back.style.visibility = "hidden"; 
+				fullname.style.visibility = "hidden";
+				animateBack();
+			}
+			tap();
+		</script>
+	</body>
+</html>
