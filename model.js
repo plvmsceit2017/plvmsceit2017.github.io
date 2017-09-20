@@ -1,5 +1,4 @@
 var candidate = [];
-candidate[1] = 'Mary Joy Montalban';
 candidate[2] = 'Pauline Ann Ballesteros';
 candidate[3] = 'Angela Ariado';
 candidate[4] = 'Elena Villamin';
@@ -15,7 +14,6 @@ candidate[13] = 'Erika Franco';
 candidate[14] = 'Alyonna Mae Agustin';
 
 var section = [];
-section[1] = 'BSCE 3-1';
 section[2] = 'BSCE 3-2';
 section[3] = 'BSCE 3-3';
 section[4] = 'BSCE 4-1';
@@ -144,7 +142,7 @@ function startModel(modelId, slideshow){
 	document.getElementById('pt').style.visibility = 'hidden';
 	document.getElementById('nm').style.visibility = 'hidden';
 	document.getElementById('sc').style.visibility = 'hidden';
-	if(slideshow && (modelId == 1) && !loaded){
+	if(slideshow && (modelId == 2) && !loaded){
 		loaded = true;
 		document.getElementById('back').style.visibility = 'hidden';
 		animateObjs('back', 'visible');
@@ -166,7 +164,7 @@ function startModel(modelId, slideshow){
 								clearInterval(nextSlide);
 							}
 							else{
-								startModel(1, true);
+								startModel(2, true);
 								clearInterval(nextSlide);
 							}
 						}
@@ -179,5 +177,5 @@ function startModel(modelId, slideshow){
 }
 document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById('besback').style.height = (document.getElementById('bes').clientHeight) + 'px';
-	startModel(1, true);
+	startModel(2, true);
 });
