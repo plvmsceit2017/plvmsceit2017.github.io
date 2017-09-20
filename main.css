@@ -103,3 +103,27 @@ body{
     top: 100%;
     transform: rotate(-90deg);
 }
+#bes{
+	color: #263238;
+	position: fixed;
+	top: 5vh;
+	left: 50vw;
+	font-size: 4vw;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#besback{
+	background-color: #b0bec5;
+	position: fixed;
+	top: 10vh;
+	left: 49vw;
+	width: 9vw;
+	height: 34vh;
+}
+#plv-logo{
+	position: fixed;
+	width: 5vw;
+	height: auto;
+	top: 2vh;
+	right: 2vw;
+}

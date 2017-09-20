@@ -132,18 +132,19 @@ function startModel(modelId, slideshow){
 	}
 	
 	
-	document.getElementById('back').style.visibility = 'hidden';
 	document.getElementById('pt').style.visibility = 'hidden';
 	document.getElementById('nm').style.visibility = 'hidden';
 	document.getElementById('sc').style.visibility = 'hidden';
-	animateObjs('back', 'visible');
+	if(slideshow && (modelId == 1)){
+		document.getElementById('back').style.visibility = 'hidden';
+		animateObjs('back', 'visible');
+	}
 	animateObjs('portrait', 'visible');
-	setTimeout(function(){animateObjs('name', 'visible');}, 300);
+	setTimeout(function(){animateObjs('name', 'visible');}, 750);
 	if(slideshow){
 		var slide = setInterval(function(){
 			if(anims['name']){
 				setTimeout(function(){
-					animateObjs('back', 'hidden');
 					animateObjs('portrait', 'hidden');
 					animateObjs('name', 'hidden');
 					var nextSlide = setInterval(function(){
