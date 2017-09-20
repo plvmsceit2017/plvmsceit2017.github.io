@@ -28,7 +28,7 @@
 		color: #263238;
 		position: fixed;
 		top: 50vh;
-		left: 15vw;
+		left: 12.5vw;
 	}
 	#name .nm{
 		padding: 0 0 0 0;
@@ -40,7 +40,7 @@
 		color: #263238;
 		position: fixed;
 		top: 50vh;
-		left: 15vw;
+		left: 12.5vw;
 	}
 	#sect .sc{
 		position: fixed;
@@ -55,7 +55,7 @@
 		height: 0;
 		position: fixed;
 		top: 50vh;
-		left: 15vw;
+		left: 12.5vw;
 	}
 	#namecover2{
 		background-color: #78909c;
@@ -63,7 +63,7 @@
 		height: 0;
 		position: fixed;
 		top: 50vh;
-		left: 15vw;
+		left: 12.5vw;
 	}
 	#bes{
 		position: fixed;
