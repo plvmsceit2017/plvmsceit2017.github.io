@@ -1,10 +1,17 @@
 @media screen and (orientation: portrait){
-	#portrait img{
+	#portrait{
+		box-shadow: 0px 10px 24px 0px #000;
+		opacity: 0;
 		width: auto;
 		height: 63vh;
 		position: fixed;
 		top: 5vh;
 		left: 10vw;
+	}
+	
+	#portrait img{
+		width: auto;
+		height: 100%;
 		filter: grayscale(100%);
 	}
 	#portraitcover{
@@ -67,7 +74,7 @@
 	}
 	#bes{
 		position: fixed;
-		top: 75vh;
+		top: 72.5vh;
 		left: 12vw;
 		flex: 1;
 	}
@@ -81,8 +88,9 @@
 		overflow: hidden;
 	}
 	#bes #besback{
+		box-shadow: 0px 10px 24px 0px #000;
 		position: fixed;
-		top: 75vh;
+		top: 72.5vh;
 		left: 10vw;
 		background-color: #b0bec5;
 		width: 25vw;
@@ -93,7 +101,7 @@
 		width: 0;
 		height: 0;
 		position: fixed;
-		top: 75vh;
+		top: 72.5vh;
 		left: 10vw;
 	}
 	#bescover2{
@@ -101,7 +109,7 @@
 		width: 0;
 		height: 0;
 		position: fixed;
-		top: 75vh;
+		top: 72.5vh;
 		left: 10vw;
 	}
 	#plv-logo{
@@ -160,7 +168,7 @@
 	#name{
 		color: #263238;
 		position: fixed;
-		top: 50vh;
+		top: 55vh;
 		left: 15vw;
 	}
 	#name .nm{
@@ -172,7 +180,7 @@
 	#sect{
 		color: #263238;
 		position: fixed;
-		top: 50vh;
+		top: 55vh;
 		left: 15vw;
 	}
 	#sect .sc{
@@ -187,7 +195,7 @@
 		width: 0;
 		height: 0;
 		position: fixed;
-		top: 50vh;
+		top: 55vh;
 		left: 15vw;
 	}
 	#namecover2{
@@ -195,12 +203,12 @@
 		width: 0;
 		height: 0;
 		position: fixed;
-		top: 50vh;
+		top: 55vh;
 		left: 15vw;
 	}
 	#bes{
 		position: fixed;
-		top: 3vh;
+		top: 8vh;
 		left: 45vw;
 		flex: 1;
 	}
@@ -214,8 +222,9 @@
 		overflow: hidden;
 	}
 	#bes #besback{
+		box-shadow: 0px 10px 24px 0px #000;
 		position: fixed;
-		top: 5vh;
+		top: 10vh;
 		left: 44vw;
 		background-color: #b0bec5;
 		width: 8vw;
@@ -226,7 +235,7 @@
 		width: 0;
 		height: 0;
 		position: fixed;
-		top: 5vh;
+		top: 10vh;
 		left: 44vw;
 	}
 	#bescover2{
@@ -234,7 +243,7 @@
 		width: 0;
 		height: 0;
 		position: fixed;
-		top: 5vh;
+		top: 10vh;
 		left: 44vw;
 	}
 	
