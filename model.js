@@ -35,6 +35,7 @@ function startModel(modelId, slideshow){
 	anims['back'] = false;
 	anims['portrait'] = false;
 	anims['name'] = false;
+	anims['bes'] = false;
 	
 	document.getElementById('nm').innerHTML = candidate[modelId];
 	document.getElementById('sc').innerHTML = section[modelId];
@@ -48,9 +49,16 @@ function startModel(modelId, slideshow){
 			Obj = document.getElementById('pt');
 		}
 		var cw = Obj.clientWidth;
+		if(part == 'bes'){
+			cw += document.getElementById('bes-text').getBoundingClientRect().left - document.getElementById('besback').getBoundingClientRect().left; 
+		}
 		if(part == 'name'){
 			document.getElementById('namecover').style.height = (document.getElementById('nm').clientHeight*2) + 'px';
 			document.getElementById('namecover2').style.height = (document.getElementById('nm').clientHeight*2) + 'px';
+		}
+		else if(part == 'bes'){
+			document.getElementById('bescover').style.height = document.getElementById('besback').style.height;
+			document.getElementById('bescover2').style.height = document.getElementById('besback').style.height;
 		}
 		function animate4th(){
 			anime({
@@ -138,6 +146,8 @@ function startModel(modelId, slideshow){
 	if(slideshow && (modelId == 1)){
 		document.getElementById('back').style.visibility = 'hidden';
 		animateObjs('back', 'visible');
+		document.getElementById('bes').style.visibility = 'hidden';
+		setTimeout(function(){animateObjs('bes', 'visible');}, 750);
 	}
 	animateObjs('portrait', 'visible');
 	setTimeout(function(){animateObjs('name', 'visible');}, 750);
