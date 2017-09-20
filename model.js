@@ -30,6 +30,7 @@ section[12] = 'BSIT 3-1';
 section[13] = 'BSIT 3-2';
 section[14] = 'BSIT 3-3';
 
+loaded = false;
 function startModel(modelId, slideshow){
 	var anims = [];
 	anims['back'] = false;
@@ -143,7 +144,8 @@ function startModel(modelId, slideshow){
 	document.getElementById('pt').style.visibility = 'hidden';
 	document.getElementById('nm').style.visibility = 'hidden';
 	document.getElementById('sc').style.visibility = 'hidden';
-	if(slideshow && (modelId == 1)){
+	if(slideshow && (modelId == 1) && !loaded){
+		loaded = true;
 		document.getElementById('back').style.visibility = 'hidden';
 		animateObjs('back', 'visible');
 		document.getElementById('bes').style.visibility = 'hidden';
@@ -175,6 +177,7 @@ function startModel(modelId, slideshow){
 		}, 30);
 	}
 }
-
-document.getElementById('besback').style.height = (document.getElementById('bes').clientHeight) + 'px';
-startModel(1, true);
+document.addEventListener("DOMContentLoaded", function(){
+	document.getElementById('besback').style.height = (document.getElementById('bes').clientHeight) + 'px';
+	startModel(1, true);
+});
