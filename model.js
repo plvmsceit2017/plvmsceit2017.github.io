@@ -1,6 +1,6 @@
 var candidate = [];
-candidate[2] = 'Pauline Ann Ballesteros';
-candidate[3] = 'Angela Ariado';
+candidate[2] = 'Mary Joy Montalban';
+candidate[3] = 'Pauline Ann Ballesteros';
 candidate[4] = 'Elena Villamin';
 candidate[5] = 'Arielle Ramirez';
 candidate[6] = 'Lovely Anne Perez';
@@ -10,12 +10,12 @@ candidate[9] = 'Aimee Cruz';
 candidate[10] = 'Maren Ramiro';
 candidate[11] = 'Pamela Pascual';
 candidate[12] = 'Kimberly Louise Sabanal';
-candidate[13] = 'Erika Franco';
+candidate[13] = 'Erika Franco';	
 candidate[14] = 'Alyonna Mae Agustin';
 
 var section = [];
-section[2] = 'BSCE 3-2';
-section[3] = 'BSCE 3-3';
+section[2] = 'BSCE 3-1';
+section[3] = 'BSCE 3-2';
 section[4] = 'BSCE 4-1';
 section[5] = 'BSCE 4-2';
 section[6] = 'BSCE 5-2';
@@ -38,7 +38,7 @@ function startModel(modelId, slideshow){
 	
 	document.getElementById('nm').innerHTML = candidate[modelId];
 	document.getElementById('sc').innerHTML = section[modelId];
-	document.getElementById('pt').src = 'model.jpg';
+	document.getElementById('pt').src = 'model-'+modelId+'.jpg';
 	
 	function animateObjs(part, visibility){
 		var animin = true;
@@ -199,6 +199,9 @@ function startModel(modelId, slideshow){
 }
 
 
+for(var i = 2; i < 15; i++){
+	document.getElementById('pt').src = 'model-'+i+'.jpg';
+}
 					
 document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById('besback').style.height = (document.getElementById('bes').clientHeight) + 'px';

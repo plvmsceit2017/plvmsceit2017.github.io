@@ -1,6 +1,6 @@
 @media screen and (orientation: portrait){
 	#portrait{
-		box-shadow: 0px 10px 24px 0px #000;
+		box-shadow: 0px 45px 100px 0px rgba(0,0,0, 0.4);
 		opacity: 0;
 		width: auto;
 		height: 63vh;
@@ -88,7 +88,6 @@
 		overflow: hidden;
 	}
 	#bes #besback{
-		box-shadow: 0px 10px 24px 0px #000;
 		position: fixed;
 		top: 72.5vh;
 		left: 10vw;
@@ -135,7 +134,7 @@
 }
 @media screen and (orientation: landscape){
 	#portrait{
-		box-shadow: 0px 10px 24px 0px #000;
+		box-shadow: 0px 45px 100px 0px rgba(0,0,0, 0.4);
 		opacity: 0;
 		width: auto;
 		height: 90vh;
@@ -222,7 +221,6 @@
 		overflow: hidden;
 	}
 	#bes #besback{
-		box-shadow: 0px 10px 24px 0px #000;
 		position: fixed;
 		top: 10vh;
 		left: 44vw;
